@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080d1b">
+    <meta name="description" content="Defiende la galaxia en esta versión arcade de Space Invaders.">
+    <title>Space Invaders — Defensa galáctica</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="Space Invaders, inicio">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>ARCADE<span class="brand-divider">/</span>1980</span>
+        </a>
+        <span class="edition">EDICIÓN GALÁCTICA</span>
+      </header>
+
+      <section class="intro" aria-labelledby="game-title">
+        <p class="eyebrow"><span class="live-dot"></span> SEÑAL DE EMERGENCIA · SECTOR 07</p>
+        <h1 id="game-title">SPACE <span>INVADERS</span></h1>
+        <p class="subtitle">La última línea de defensa eres tú.</p>
+      </section>
+
+      <section class="game-shell" aria-label="Partida de Space Invaders">
+        <div class="scoreboard" aria-label="Marcador">
+          <div class="stat">
+            <span class="stat-label">PUNTUACIÓN</span>
+            <span class="stat-value" id="score">000000</span>
+          </div>
+          <div class="stat stat-center">
+            <span class="stat-label">NIVEL</span>
+            <span class="stat-value" id="level">01</span>
+          </div>
+          <div class="stat stat-right">
+            <span class="stat-label">NAVE</span>
+            <span class="lives" id="lives" aria-label="3 vidas">
+              <span class="life-icon" aria-hidden="true">◆</span>
+              <span class="life-icon" aria-hidden="true">◆</span>
+              <span class="life-icon" aria-hidden="true">◆</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="game-frame">
+          <canvas id="game" width="960" height="600" aria-label="Juego Space Invaders. Usa las flechas para moverte y espacio para disparar."></canvas>
+          <div class="game-overlay" id="overlay">
+            <div class="overlay-card">
+              <span class="overlay-kicker" id="overlay-kicker">TRANSMISIÓN ENTRANTE</span>
+              <h2 id="overlay-title">Defiende la Tierra</h2>
+              <p id="overlay-copy">Una flota alienígena se acerca. Derríbala antes de que alcance tu posición.</p>
+              <button class="start-button" id="start-button" type="button">
+                <span id="button-label">Iniciar partida</span>
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </button>
+              <span class="enter-hint">o pulsa <kbd>ENTER</kbd></span>
+            </div>
+          </div>
+          <div class="level-banner" id="level-banner" aria-live="polite"></div>
+        </div>
+
+        <div class="control-bar">
+          <div class="control-hint">
+            <span class="key-group"><kbd>←</kbd><kbd>→</kbd></span>
+            <span>MOVER</span>
+          </div>
+          <div class="control-hint">
+            <kbd class="space-key">ESPACIO</kbd>
+            <span>DISPARAR</span>
+          </div>
+          <div class="control-tip"><span aria-hidden="true">✦</span> Elimina a todos para avanzar de nivel</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>UN JUEGO DE SUPERVIVENCIA CÓSMICA</span>
+        <span class="footer-status"><span class="live-dot"></span> SISTEMA EN LÍNEA</span>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
